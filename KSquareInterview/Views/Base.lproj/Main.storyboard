@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KSquareInterview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwN-jd-EVf">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBO-Af-nVb">
+                                <rect key="frame" x="165" y="586" width="84" height="30"/>
+                                <state key="normal" title="Get weather"/>
+                                <connections>
+                                    <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22P-Oc-5Nq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TfR-Rp-UYd">
+                                <rect key="frame" x="82" y="212" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="4t5-YQ-K3e"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TfR-Rp-UYd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="168" id="BVH-Uf-fVo"/>
+                            <constraint firstItem="sBO-Af-nVb" firstAttribute="top" secondItem="hwN-jd-EVf" secondAttribute="bottom" constant="127.5" id="OgE-x5-GKt"/>
+                            <constraint firstItem="TfR-Rp-UYd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XMY-9K-19b"/>
+                            <constraint firstItem="hwN-jd-EVf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bam-Aq-zwL"/>
+                            <constraint firstItem="sBO-Af-nVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cWI-2w-RQl"/>
+                            <constraint firstItem="hwN-jd-EVf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sMO-z6-O2H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtFieldTopConstraint" destination="BVH-Uf-fVo" id="Htd-6K-pO6"/>
+                        <outlet property="weatherLbl" destination="hwN-jd-EVf" id="cqS-V6-vky"/>
+                        <outlet property="zipCodeTxtField" destination="TfR-Rp-UYd" id="ESw-OZ-ZTf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
